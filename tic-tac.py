@@ -89,7 +89,7 @@ while True:
     theBoard = [''] * 10
     playerLetter, computerLetter = player_input()
     turn = choose_first()
-    print('The '+ turn + ' will go first!')
+    print(turn + ' will go first!')
     gameIsPlaying = True
 
     while gameIsPlaying:
