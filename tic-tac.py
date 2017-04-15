@@ -78,3 +78,37 @@ def win_check(board, mark):
 def full_board_check(board):
     for i in range(1,10):
         return space_check(board, i)
+
+#################
+## Algorithm
+#
+print('Welcome to Tic Tac Toe!')
+
+while True:
+    #Reset the board
+    theBoard = [''] * 10
+    playerLetter, computerLetter = player_input()
+    turn = choose_first()
+    print('The '+ turn + ' will go first!')
+    gameIsPlaying = True
+
+    while gameIsPlaying:
+        if turn == 'Player1':
+        #player's turn
+        draw_board(theBoard)
+        make_move(theBoard, playerLetter, move)
+
+        if win_check(board, mark):
+            draw_board(theBoard)
+            print(turn + 'has won the game!')
+            gameIsPlaying = False
+        else:
+            if full_board_check(theBoard):
+            draw_board(theBoard)
+            print('The game is a tie!')
+            break
+        else:
+            turn = 'Player2'
+
+    if not play_again():
+        break
