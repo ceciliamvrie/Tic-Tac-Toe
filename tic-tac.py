@@ -88,8 +88,8 @@ while True:
     #Reset the board
     theBoard = [''] * 10
     playerLetter, computerLetter = player_input()
-    turn = choose_first()
-    print('The '+ turn + ' will go first!')
+    startingPlayer = choose_first()
+    print(startingPlayer + ' will go first!')
     gameIsPlaying = True
 
     while gameIsPlaying:
